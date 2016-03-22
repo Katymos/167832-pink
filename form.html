@@ -4,6 +4,7 @@
     <title>HTML Academy: Пинк</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
@@ -29,18 +30,18 @@
     </header>
     <div class="contest-form">
       <div class="container">
-        <h3 class="contest-form__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</h3>
+        <p class="text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
         <form action="" method="POST">
           <div class="contest-form__bundle-wrap">
-            <label for="name">Имя:</label>
+            <label for="name" class="label">Имя:</label>
               <input type="text" class="contest-form__name" id="name" name="name" placeholder="Введите ваше имя">
-            <label for="surname">Фамилия:</label>
+            <label for="surname" class="label">Фамилия:</label>
               <input type="text" class="contest-form__surname" id="surname" name="surname" placeholder="Укажите фамилию">
-            <label for="second-name">Отчество:</label>
+            <label for="second-name" class="label">Отчество:</label>
               <input type="text" class="contest-form__second-name" id="second-name" name="second-name" placeholder="Ну и отчество тоже">
           </div>
-          <div class="contest-form__bundle-wrap">
-            <label class="contest-form__bundle-title">Ваши безбашенные достижения в путешествии</label>
+          <div class="contest-form__bundle-wrap contest-form__bundle-wrap--color">
+            <label class="label label--align">Ваши безбашенные достижения в путешествии</label>
             <label>
               <input type="checkbox" name="achievement-1" value="1" checked>Сделал селфи с акулой
             </label>
@@ -61,13 +62,13 @@
             </label>
           </div>
           <div class="contest-form__bundle-wrap">
-            <label for="phone">Номерок телефончика</label>
+            <label for="phone" class="label">Номерок телефончика</label>
             <input type="tel" class="contest-form__tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
-            <label for="email">Адресок почты</label>
+            <label for="email" class="label">Адресок почты</label>
             <input type="email" class="contest-form__email" id="email"  name="email" placeholder="E-mail, пожалуйста">
           </div>
-          <div class="contest-form__bundle-wrap">
-            <label class="contest-form__bundle-title">С каким приложением путешествовали?</label>
+          <div class="contest-form__bundle-wrap contest-form__bundle-wrap--color">
+            <label class="label label--align">С каким приложением путешествовали?</label>
             <label>
               <input type="radio" name="apps" value="iOS" checked>Pink для iOS
             </label>
@@ -79,24 +80,26 @@
             </label>
           </div>
           <div class="contest-form__bundle-wrap">
-            <label class="contest-form__bundle-title">Опишите свои эмоции</label>
+            <label class="label label--align">Опишите свои эмоции</label>
             <textarea placeholder="Можно прям в красках, не стесняясь в выражениях" name="comment"></textarea>
           </div>
           <input type="submit" class="contest-form__submit" value="Отправить форму">
         </form>
-        <p class="contest-form__note"><sup>*</sup>&mdash;обязательные поля</p>
+        <p class="contest-form__note"><sup>*</sup> &mdash; обязательные поля</p>
       </div>
     </div>
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__logo">
-          <a href="#" class="page-footer__link">
-            <img src="http://placehold.it/75x22" width="75" height="22" alt="Pink" class="page-footer__logo-img">
+          <a href="#" class="page-footer__logo-link">
+            <img src="../img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Pink" class="page-footer__logo-img">
           </a>
         </div>
-        <a href="#" class="page-footer__social social-tw">Twitter</a>
-        <a href="#" class="page-footer__social social-fb">Facebook</a>
-        <a href="#" class="page-footer__social social-you">Youtube</a>
+        <div class="page-footer__social-btns">
+          <a href="#" class="page-footer__social page-footer__social--tw">Twitter</a>
+          <a href="#" class="page-footer__social page-footer__social--fb">Facebook</a>
+          <a href="#" class="page-footer__social page-footer__social--you">Youtube</a>
+        </div>
         <div class="page-footer__design">Разработано
           <a href="#" class="footer-page__icon-academy">HTML Academy</a>
         </div>
