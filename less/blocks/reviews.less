@@ -1,0 +1,50 @@
+.reviews {
+  outline: 1px solid red;
+  &__slider-wrap {
+    position: relative;
+  }
+  &__slider-wrap input[type="radio"] {
+    display: none
+  }
+}
+.reviews-controls {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 40px;
+    z-index: 100;
+    text-align: center;
+    & label {
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      background: #bec2c6;
+      border: 3px solid transparent;
+      vertical-align: top;
+      border-radius: 50%;
+      cursor: pointer;
+      box-sizing: content-box;
+      background-clip: padding-box;
+    }
+}
+.reviews__item {
+  text-align: center;
+  padding: 50px 0 90px;
+  &:nth-of-type(2) {
+    display:none;
+  }
+  &:nth-of-type(3) {
+    display:none;
+  }
+}
+.reviews__title {
+  padding: 0 0 25px 0
+}
+.reviews__text {
+  width: 100%;
+  margin: 0
+}
+#reviews-btn-1:checked ~ .reviews-controls label[for="reviews-btn-1"] {
+    border: 3px solid #283645;
+    background: transparent;
+}
