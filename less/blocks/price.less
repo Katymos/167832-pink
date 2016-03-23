@@ -1,0 +1,62 @@
+.price {
+  outline: 1px solid red;
+  &__inner {
+    position: relative;
+  }
+  &__inner input[type="radio"] {
+    display: none
+  }
+}
+.price-controls {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 40px;
+    z-index: 100;
+    text-align: center;
+    & label {
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      background: #bec2c6;
+      border: 3px solid transparent;
+      vertical-align: top;
+      border-radius: 50%;
+      cursor: pointer;
+      box-sizing: content-box;
+      background-clip: padding-box;
+    }
+}
+.price__table-wrap {
+  overflow: hidden;
+}
+.price__table {
+  border-collapse: collapse;
+  min-width: 265%;
+  margin: 0 0 95px 0;
+  & td {
+    border: 2px solid #e5e5e5;
+    padding: 15px;
+  }
+}
+.price-table-head {
+  padding: 20px;
+}
+.price .icon {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  border: 0;
+  color: transparent;
+  float: right;
+}
+.icon-yes {
+  background: url("../img/icon-yes.svg") no-repeat scroll 50% 50%;
+}
+.icon-no {
+  background: url("../img/icon-no.svg") no-repeat scroll 50% 50%;
+}
+#price-btn-1:checked ~ .price-controls label[for="price-btn-1"] {
+    border: 3px solid #283645;
+    background: transparent;
+}
