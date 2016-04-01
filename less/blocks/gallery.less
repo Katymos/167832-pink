@@ -1,7 +1,130 @@
 .text {
   text-align: center;
-  padding: 55px 0
+  padding: 55px 0;
 }
-.gallery__content {
-  padding: 25px 20px
+.gallery {
+  &__item {
+    margin-bottom: 22px;
+    & a {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__item:last-of-type {
+    margin-bottom: 0;
+  }
+  &__item--panorama {
+    position: relative;
+    float: none;
+  }
+  &__thumbnail-title {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding: 5px 22px;
+    background-color: #d22856;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  &__thumbnail img {
+    vertical-align: bottom;
+  }
+  &__content {
+    width: 280px;
+    margin: 0 auto;
+    padding: 18px;
+    box-sizing: border-box;
+    line-height: 24px;
+    background-color: #f2f2f2;
+  }
+  &__author {
+    font-size: 14px;
+      & span {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+  }
+  &__text {
+    margin-bottom: 10px;
+  }
+  &__like {
+    color: #d22856;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  &__like::before {
+    content: '';
+    background: url(../img/icon-heart.svg) no-repeat;
+    width: 13px;
+    height: 12px;
+    display: block;
+    float: left;
+    margin: 6px 15px 0 0;
+  }
+}
+@media @tablet-width {
+  .gallery {
+    .clearfix();
+    & .text {
+      font-size: 18px;
+      padding: 100px 40px 50px;
+    }
+    &__item {
+      float: left;
+      margin-right: 20px;
+      .clearfix();
+    }
+    &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+    &__item:last-of-type {
+      .clearfix();
+      margin-bottom: 22px;
+    }
+    &__item--panorama {
+      float: none;
+      width: auto;
+      height: auto;
+    }
+    &__thumbnail-title {
+      top: 55px;
+      right: 115px;
+    }
+    &__content {
+      padding: 20px 25px;
+      width: 300px;
+      min-height: 155px;
+    }
+    &__content--full-width {
+      width: 620px;
+      position: relative;
+    }
+    &__like--top {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+    }
+  }
+}
+@media @desktop-width {
+  .gallery {
+    &__item:nth-child(2n) {
+      margin-right: 20px;
+    }
+    &__item:nth-child(3n+3) {
+      margin-right: 0;
+    }
+    &__thumbnail-title {
+      top: 55px;
+      right: 185px;
+    }
+    &__content--full-width {
+      width: 940px;
+    }
+    &__like--top {
+      right: 50px;
+    }
+  }
 }

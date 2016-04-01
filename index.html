@@ -4,59 +4,72 @@
     <title>HTML Academy: Пинк</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--home">
       <div class="container">
         <div class="page-header__logo">
-          <a href="/" class="page-header__logo-link">
-            <img src="http://placehold.it/75x22" width="75" height="22" alt="Pink" class="page-header__logo-img">
-          </a>
+          <a href="/" class="page-header__logo-link"></a>
+          <nav class="main-nav">
+            <!--<span class="main-nav__toggle main-nav__toggle--closed">Открыть меню</span>
+            <div class="main-nav__wrapper main-nav__wrapper--closed">
+              <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Информация</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Возможности</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Стоимость</a></li>
+              </ul>
+            </div>-->
+          </nav>
         </div>
-        <nav class="main-nav">
-          <span class="main-nav__toggle main-nav__toggle--closed">Открыть меню</span>
-          <div class="main-nav__wrapper main-nav__wrapper--closed">
-            <ul class="main-nav__items">
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Информация</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Возможности</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Стоимость</a></li>
-            </ul>
-          </div>
-        </nav>
-        <h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
         <div class="intro">
+        <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
           <a href="#" class="intro__button">Скачать приложение</a>
           <ul class="intro__list">
             <li><a href="#" class="intro__logo intro__logo--ios">Приложение для iOS</a></li>
             <li><a href="#" class="intro__logo intro__logo--android">Приложение для Android</a></li>
             <li><a href="#" class="intro__logo intro__logo--windows">Приложение для Windows</a></li>
           </ul>
-          <p class="inro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window 8</p>
+          <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window 8</p>
         </div>
       </div>
     </header>
     <section class="features">
       <div class="container">
-        <h2 class="features__slogan">Устали от серости мегаполиса? <br>Нам есть, что вам  предложить!</h2>
+        <h2 class="features__slogan">
+          <span class="features__span">Устали от серости мегаполиса?</span>
+          <span class="features__span">Нам есть, что вам  предложить!</span>
+        </h2>
         <ul class="features__items">
           <li class="features__item">
-            <h3 class="features_feature">Поднимает настроение</h3>
-            <p class="features_text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <h3 class="features__feature">Поднимает настроение</h3>
+            <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
           <li class="features__item">
-            <h3 class="features_feature">Меняет мир вокруг</h3>
-            <p class="features_text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <h3 class="features__feature">Меняет мир вокруг</h3>
+            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
           <li class="features__item">
-            <h3 class="features_feature">Заводит новых друзей</h3>
-            <p class="features_text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <h3 class="features__feature">Заводит новых друзей</h3>
+            <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
       </div>
     </section>
+    <div class="research">
+      <div class="container">
+        <div class="research__inner">
+          <div class="research__item">
+            <h3 class="research__title">Эффект на 24 часа!</h2>
+            <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="research__link" href="/">Узнать больше об исследовании</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="reviews">
       <div class="container">
           <div class="reviews__slider-wrap">
@@ -68,24 +81,30 @@
               <label for="reviews-btn-2"></label>
               <label for="reviews-btn-3"></label>
             </div>
-
               <div class="reviews__items">
                 <div class="reviews__item">
-                  <h3 class="reviews__title">Николай Петров</h3>
+                  <div class="reviews__author">
+                    <span class="reviews__title">Николай Петров</span>
+                    <span class="reviews__info">25 лет, водитель трамвая</span>
+                  </div>
                   <blockquote class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</blockquote>
                 </div>
                 <div class="reviews__item">
-                  <h3 class="reviews__title">Николай Петров</h3>
+                  <div class="reviews__author">
+                    <span class="reviews__title">Николай Петров</span>
+                    <span class="reviews__info">25 лет, водитель трамвая</span>
+                  </div>
                   <blockquote class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</blockquote>
                 </div>
                 <div class="reviews__item">
-                  <h3 class="reviews__title">Николай Петров</h3>
+                  <div class="reviews__author">
+                    <span class="reviews__title">Николай Петров</span>
+                    <span class="reviews__info">25 лет, водитель трамвая</span>
+                  </div>
                   <blockquote class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</blockquote>
                 </div>
-
             </div>
           </div>
-
       </div>
     </div>
     <div class="price">
@@ -102,19 +121,21 @@
           <div class="price__table-wrap">
             <table class="price__table">
               <tr class="price__table-row">
-                <td class="price-table-head">
+                <td class="price__table-head"></td>
+                <td class="price__table-head">
                   <div class="price__head">
                     <h3 class="price__tariff-name">База</h3>
                     <p class="price__tariff-cost">1,99 USD</p>
                   </div>
                 </td>
-                <td class="price-table-head">
+                <td class="price__table-head">
                   <div class="price__head">
+                    <p class="price__label"><span>Хит</span></p>
                     <h3 class="price__tariff-name">Стандарт</h3>
                     <p class="price__tariff-cost">3,99 USD</p>
                   </div>
                 </td>
-                <td class="price-table-head">
+                <td class="price__table-head">
                   <div class="price__head">
                     <h3 class="price__tariff-name">Анлим</h3>
                     <p class="price__tariff-cost">9,99 USD</p>
@@ -122,63 +143,54 @@
                 </td>
               </tr>
               <tr class="price__table-row">
-                <td class="price__table-col">
-                  <div class="price__wrap">
-                    <span class="package-option">Розовый фильтр</span>
-                    <span class="icon icon-yes">Есть</span>
-                  </div>
+                <td class="price__table-col-hidden">
+                    <span class="package-option-hidden">Розовый фильтр</span>
                 </td>
                 <td class="price__table-col">
-                  <div class="price__wrap">
-                    <span class="package-option">Розовый фильтр</span>
-                    <span class="icon-yes">Есть</span>
-                  </div>
-                </td>
-                <td class="price__table-col">
-                  <div class="price__wrap">
                     <span class="package-option">Розовый фильтр</span>
                     <span class="icon icon-yes">Есть</span>
-                  </div>
+                </td>
+                <td class="price__table-col">
+                    <span class="package-option">Розовый фильтр</span>
+                    <span class="icon icon-yes">Есть</span>
+                </td>
+                <td class="price__table-col">
+                    <span class="package-option">Розовый фильтр</span>
+                    <span class="icon icon-yes">Есть</span>
                 </td>
               </tr>
               <tr class="price__table-row">
+                <td class="price__table-col-hidden">
+                    <span class="package-option-hidden">Смайлики</span>
+                </td>
                 <td class="price__table-col">
-                  <div class="price__wrap">
                     <span class="package-option">Смайлики</span>
                     <span class="icon icon-no">Нет</span>
-                  </div>
                 </td>
                 <td class="price__table-col">
-                  <div class="price__wrap">
                     <span class="package-option">Смайлики</span>
                     <span class="icon icon-yes">Есть</span>
-                  </div>
                 </td>
                 <td class="price__table-col">
-                  <div class="price__wrap">
                     <span class="package-option">Смайлики</span>
                     <span class="icon icon-yes">Есть</span>
-                  </div>
                 </td>
               </tr>
               <tr class="price__table-row">
-                <td class="price__table-col">
-                  <div class="price__wrap">
-                    <span class="package-option">Комментарии</span>
-                    <span class="icon icon-no">Нет</span>
-                  </div>
+                <td class="price__table-col-hidden">
+                    <span class="package-option-hidden">Комментарии</span>
                 </td>
                 <td class="price__table-col">
-                  <div class="price__wrap">
                     <span class="package-option">Комментарии</span>
                     <span class="icon icon-no">Нет</span>
-                  </div>
                 </td>
                 <td class="price__table-col">
-                  <div class="price__wrap">
+                    <span class="package-option">Комментарии</span>
+                    <span class="icon icon-no">Нет</span>
+                </td>
+                <td class="price__table-col">
                     <span class="package-option">Комментарии</span>
                     <span class="icon icon-yes">Есть</span>
-                  </div>
                 </td>
               </tr>
             </table>
@@ -189,21 +201,40 @@
     <footer class="page-footer">
       <div class="container">
         <h3 class="page-footer__slogan">Остались вопросы? Свяжитесь с нами!</h3>
-        <div class="page-footer__contacts">
-          <h3 class="page-footer__title">Звоните:</h3>
-          <a href="tel:+78125556666" class="page-footer__text">+7 (812) 555-66-66</a>
-        </div>
-        <div class="page-footer__contacts">
-          <h3 class="page-footer__title">Пишите:</h3>
-          <a href="mailto:mail@htmlacademy.ru" class="page-footer__text">mail@htmlacademy.ru</a>
-        </div>
-        <div class="page-footer__contacts">
-          <h3 class="page-footer__title">Приезжайте в гости:</h3>
-          <p class="page-footer__text">ул. Большая Конюшенная, 19/8</p>
+         <div class="page-footer__contacts-wrap">
+          <div class="page-footer__contacts">
+            <h3 class="page-footer__title">Звоните:</h3>
+            <a href="tel:+78125556666" class="page-footer__text">+7 (812) 555-66-66</a>
+          </div>
+          <div class="page-footer__contacts">
+            <h3 class="page-footer__title">Пишите:</h3>
+            <a href="mailto:mail@htmlacademy.ru" class="page-footer__text">mail@htmlacademy.ru</a>
+          </div>
+          <div class="page-footer__contacts">
+            <h3 class="page-footer__title">Приезжайте в гости:</h3>
+            <p class="page-footer__text">ул. Большая Конюшенная, 19/8</p>
+          </div>
         </div>
       </div>
       <div class="page-footer__map">
         <div class="page-footer__map-marker"></div>
+      </div>
+      <div class="page-footer__bottom">
+        <div class="container">
+          <div class="page-footer__logo">
+            <a href="#" class="page-footer__logo-link">
+              <img src="../img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Pink" class="page-footer__logo-img">
+            </a>
+          </div>
+          <div class="page-footer__social">
+            <a href="#" class="page-footer__icon page-footer__icon--tw">Twitter</a>
+            <a href="#" class="page-footer__icon page-footer__icon--fb">Facebook</a>
+            <a href="#" class="page-footer__icon page-footer__icon--you">Youtube</a>
+          </div>
+          <div class="page-footer__design">Разработано
+            <a href="#" class="page-footer__icon-academy">HTML Academy</a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

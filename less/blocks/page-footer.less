@@ -1,19 +1,152 @@
 .page-footer {
   outline: 1px solid red;
+  padding: 27px 0 0;
   &__contacts {
     text-align: center;
-    padding: 0 0 30px 0
+    margin: 0 0 22px 0
   }
   &__slogan {
     font-weight: 300;
     font-size: 24px;
     text-align: center;
-    padding:  40px 0
+    padding:  45px 0 33px 0;
+    line-height: 29px;
+  }
+  &__title {
+    font-size: 18px;
+  }
+  &__text {
+    text-decoration: none;
+    color: @highlight-color;
+    font-size: 24px;
+  }
+  &__text:last-child {
+    padding: 0 20px;
+    line-height: 29px;
+  }
+  &__logo,
+  &__social,
+  &__design {
+    text-align: center;
+    padding: 10px
+  }
+  &__icon {
+    width: 46px;
+    height: 45px;
+    margin: 0 5px;
+    display: inline-block;
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 3px solid #e9eaec;
+  }
+  &__icon--tw {
+    background: url(../img/icon-twitter.svg) no-repeat center;
+  }
+  &__icon--fb {
+    background: url(../img/icon-facebook.svg) no-repeat center;
+  }
+  &__icon--you {
+    background: url(../img/icon-youtube.svg) no-repeat center;
+  }
+  &__icon-academy {
+    background: url(../img/logo-htmlacademy.svg) no-repeat center;
+    width: 27px;
+    height: 35px;
+    margin: 0 10px;
+    display: inline-block;
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    position: absolute;
   }
 }
-.page-footer__logo,
-.page-footer__social-btns,
-.page-footer__design {
-  text-align: center;
-  padding: 30px
+@media @tablet-width {
+  .page-footer {
+    &__slogan {
+      font-size: 40px;
+      padding: 15px 30px 41px 30px;
+      line-height: 50px;
+    }
+    &__contacts-wrap {
+      .clearfix();
+    }
+    &__contacts:not(:nth-of-type(3)) {
+      float: left;
+      margin: 0 35px 45px 0;
+    }
+    &__title {
+      margin-bottom: 4px;
+    }
+    &__map {
+      background: url(../img/map-tablet.jpg) no-repeat center;
+      height: 375px;
+    }
+    &__map::before {
+      content: '';
+      background: url(../img/triangle-white-footer.png) no-repeat center;
+      height: 123px;
+      display: block;
+    }
+    &__bottom > .container {
+      .clearfix();
+    }
+    &__logo {
+        float: left;
+        padding: 0;
+        padding-top: 32px;
+    }
+    &__social {
+      float: left;
+      padding: 22px 0 0 65px;
+    }
+    &__design {
+      width: 190px;
+      float: right;
+      padding-top: 48px;
+      font-size: 14px;
+    }
+  }
+}
+@media @desktop-width {
+  .page-footer {
+    &__slogan {
+      font-size: 50px;
+      padding: 53px 108px;
+      line-height: 60px;
+    }
+    &__map {
+      background: url(../img/map-desktop.jpg) no-repeat center;
+      height: 525px;
+    }
+    &__map::before {
+      content: '';
+      background: url(../img/triangle-white-footer.png) no-repeat center;
+      height: 123px;
+      display: block;
+    }
+    &__bottom > .container {
+      .clearfix();
+    }
+    &__logo {
+      float: left;
+      padding: 0;
+      padding-top: 65px;
+    }
+    &__social {
+      float: left;
+      padding: 55px 0 0 227px;
+    }
+    &__design {
+      width: 200px;
+      float: right;
+      padding-top: 82px;
+      font-size: 18px;
+    }
+  }
 }
