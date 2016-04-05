@@ -6,14 +6,14 @@
   &__slider-wrap input[type="radio"] {
     display: none
   }
-}
-.reviews-controls {
+  &-controls {
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 40px;
     z-index: 100;
     text-align: center;
+    display: block;
     & label {
       width: 6px;
       height: 6px;
@@ -25,26 +25,105 @@
       cursor: pointer;
       box-sizing: content-box;
       background-clip: padding-box;
+      margin-left: 10px
     }
-}
-.reviews__item {
+  }
+  &__item {
+  position: relative;
   text-align: center;
-  padding: 50px 0 90px;
+  padding: 45px 10px 89px;
   &:nth-of-type(2) {
     display:none;
   }
   &:nth-of-type(3) {
     display:none;
   }
-}
-.reviews__title {
-  padding: 0 0 25px 0
-}
-.reviews__text {
-  width: 100%;
-  margin: 0
+  }
+  &__author {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: auto;
+    left: 0;
+  }
+  &__title {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__info {
+    display: none;
+  }
+  &__text {
+    width: 100%;
+    margin: 0;
+    line-height: 30px;
+  }
 }
 #reviews-btn-1:checked ~ .reviews-controls label[for="reviews-btn-1"] {
     border: 3px solid #283645;
     background: transparent;
 }
+@media @tablet-width {
+  .reviews {
+    &__item {
+    padding: 79px 0 150px;
+    }
+    &__author {
+      top: 207px;
+      left: 0
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__info {
+      display: block;
+    }
+    &__text {
+      font-size: 18px;
+    }
+    &-controls {
+      bottom: 0;
+    }
+  }
+}
+@media @desktop-width {
+  .reviews {
+    &__slider-wrap {
+    padding: 60px 0 140px;
+    }
+    &__item {
+      padding: 0;
+    }
+    &__text {
+      width: 680px;
+      margin: 0 auto;
+    }
+    &__controls {
+      display: none;
+    }
+    &__author {
+      top: 145px;
+      left: 0;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__info {
+      font-size: 18px;
+    }
+    &-controls {
+      display: none;
+    }
+    &__slider-wrap:before {
+      width: 80px;
+      height: 70px;
+      margin: 0 auto 40px;
+      display: block;
+      background: url("../img/quotes.svg") no-repeat;
+      content: "";
+    }
+  }
+}
+
+

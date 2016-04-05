@@ -1,16 +1,228 @@
 .page-header {
   outline: 1px solid red;
-  &__logo {
-    height: 66px;
-    outline: 1px solid green;
-  }
+  background: #283645 url(../img/bg-back-mobile.jpg) no-repeat top center;
+  min-height: 237px;
+    &__logo {
+      height: 66px;
+      outline: 1px solid green;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    &__logo-link {
+      background: url(../img/logo-pink-white-mobile.svg) no-repeat;
+      display: block;
+      width: 75px;
+      height: 23px
+    }
+    &__logo-img {
+      padding: 20px;
+    }
+    &__title {
+      font-size: 25px;
+      font-weight: 300;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0 0 0;
+      line-height: 29px;
+    }
+}
+.page-header--home {
+  background: #283645 url(../img/bg-back-mobile-home.jpg) no-repeat top center;
 }
 .intro {
   outline: 1px solid grey;
+  padding-bottom: 30px;
+  &__title {
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    margin: 0 auto 355px;
+  }
+  &__button {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    padding: 11px 0;
+    font-size: 18px;
+    font-weight: bold;
+    width: 280px;
+    margin: 0 auto 25px;
+  }
   &__list {
     list-style: none;
-  }
-  &__discription {
     text-align: center;
+  }
+  &__list li {
+    display: inline-block;
+    width: 50px;
+    margin: 11px 10px 18px 16px;
+    vertical-align: middle;
+  }
+  &__logo {
+    display: block;
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+  }
+  &__logo--ios {
+    background: url(../img/logo-apple.svg) no-repeat;
+    height: 57px;
+  }
+  &__logo--android {
+    background: url(../img/logo-android.svg) no-repeat;
+    height: 47px;
+  }
+  &__logo--windows {
+    background: url(../img/logo-microsoft.svg) no-repeat;
+    height: 42px;
+  }
+  &__description {
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+  }
+}
+@media @tablet-width {
+  .page-header {
+    outline: 1px solid red;
+    background: url(../img/bg-back-tablet.jpg) no-repeat top center;
+    /*height: 729px;*/
+      &__title {
+        font-size: 50px;
+        line-height: 60px;
+        padding: 69px 0 140px 0;
+      }
+      &__logo {
+        padding: 30px 0;
+        height: 111px
+      }
+      &__logo-link {
+      background: url(../img/logo-pink-white-tablet.png) no-repeat;
+      width: 147px;
+      height: 40px;
+    }
+  }
+  .page-header--home {
+    background: #283645 url(../img/bg-back-tablet-home.jpg) no-repeat top center;
+  }
+  .intro {
+    padding: 0;
+    &__title {
+      font-size: 40px;
+      padding: 93px 340px 34px 27px;
+      line-height: 47px;
+      margin: 0 auto;
+    }
+    &__button {
+      width: 293px;
+      margin: 0 0 35px 0;
+    }
+    &__list {
+      display: inline-block;
+      margin: 0 0 0 30px;
+    }
+    &__description {
+      text-align: left;
+      font-size: 18px;
+      padding: 17px 243px 90px 0;
+    }
+  }
+  .features {
+    &__slogan {
+      padding: 58px 0 0 0;
+    }
+    &__slogan span {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &__slogan span:nth-of-type(2) {
+      padding: 0 40px;
+    }
+    &__items {
+      .clearfix();
+    }
+    &__items::before {
+      content: '';
+      background: url("../img/iphone-screen-tablet.png") no-repeat;
+      width: 268px;
+      height: 481px;
+      margin: 0 40px 0 0;
+      float: left;
+    }
+    & .features__item:last-child::after {
+      display: none;
+    }
+  }
+}
+@media @desktop-width {
+  .page-header {
+    outline: 1px solid red;
+    background: url(../img/bg-back-desktop.jpg) no-repeat top center;
+    /*height: 853px;*/
+      &__logo {
+        padding: 30px 0;
+        height: 111px
+      }
+      &__logo-link {
+      background: url(../img/logo-desktop.png) no-repeat;
+      width: 147px;
+      height: 40px;
+    }
+  }
+  .page-header--home {
+    background: #283645 url(../img/bg-back-desktop-home.jpg) no-repeat top center;
+  }
+  .intro {
+    padding: 0;
+    &__title {
+      font-size: 50px;
+      padding: 110px 640px 56px 3px;
+      line-height: 58px;
+      margin: 0 auto;
+    }
+    &__button {
+      width: 293px;
+      margin: 0 0 60px 0;
+      font-size: 21px;
+    }
+    &__list {
+      display: inline-block;
+      margin: 0 0 0 30px;
+    }
+    &__description {
+      text-align: left;
+      font-size: 18px;
+      padding: 33px 572px 100px 0;
+    }
+  }
+  .features {
+    &__slogan {
+      padding: 69px 69px 114px;
+    }
+    &__slogan span {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    &__items {
+      .clearfix();
+    }
+    &__items::before {
+      content: '';
+      background: url("../img/iphone-screen-tablet.png") no-repeat;
+      width: 268px;
+      height: 481px;
+      margin: 0 40px 0 0;
+      float: left;
+    }
+    & .features__item:last-child::after {
+      display: none;
+    }
   }
 }

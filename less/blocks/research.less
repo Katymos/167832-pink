@@ -1,0 +1,93 @@
+.research {
+  display: none;
+}
+@media @tablet-width {
+  .research {
+    display: block;
+    &__item {
+      width: 310px;
+      padding: 21px 0 0;
+      margin: 20px 0 0 310px;
+      text-align: left;
+      .clearfix();
+    }
+    &__title {
+      color: #000;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 34px;
+      margin-bottom: 10px;
+      width: 170px;
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    &__link {
+      color: #d22856;
+    }
+    &__inner {
+      position: relative;
+      &::before {
+        content: '';
+        background: url("../img/timer.svg") no-repeat;
+        width: 261px;
+        height: 302px;
+        display: block;
+        float: left;
+      }
+      &::after {
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        top: 65px;
+        left: 25px;
+        content: "24";
+        color: #d22856;
+        font-size: 105px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 180px;
+        border: 10px solid #d22856;
+        border-radius: 50%;
+        display: block;
+      }
+    }
+  }
+}
+@media @desktop-width {
+  .research {
+    display: block;
+    padding: 0 0 90px 0;
+    &__item {
+      width: 520px;
+      margin: 20px 0 0 367px;
+      text-align: left;
+      padding: 100px 0 0 0;
+      .clearfix();
+    }
+    &__title {
+      font-size: 30px;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    &__text {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    &__link {
+      color: #d22856;
+      font-size: 18px;
+    }
+    &__inner {
+      position: relative;
+      &::before {
+        margin: 15px;
+      }
+      &::after {
+        top: 82px;
+        left: 40px;
+      }
+    }
+  }
+}

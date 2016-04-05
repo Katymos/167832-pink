@@ -1,36 +1,222 @@
-label {
-  display: block;
-  margin-bottom: 5px;
-  margin-top: 10px;
+.contest-form {
+  & .text {
+    text-align: center;
+    padding: 45px 20px 0;
+    line-height: 29px;
+  }
+  & .text--hidden {
+    display: none;
+  }
+  & form {
+    margin: 0 20px
+  }
+  &__bundle-wrap {
+    padding: 35px 0 40px;
+      & label:last-child {
+      margin-bottom: 0;
+    }
+  }
+  & fieldset label {
+    display: block;
+    margin: 15px 0 47px 0;
+    font-size: 18px;
+  }
+  &__legend-hidden {
+    display: none;
+  }
+  & .label {
+    color: #d22856;
+    text-transform: uppercase;
+    padding: 0 0 0 20px;
+    font-size: 14px;
+    margin: 0 0 0 5px;
+  }
+  & legend {
+    color: #d22856;
+    text-transform: uppercase;
+    padding-left: 23px;
+    margin-bottom: 4px;
+    text-align: center;
+    padding: 0 20px 20px;
+    line-height: 15px;
+  }
+  & input[type="text"],
+  & input[type="tel"],
+  & input[type="email"] {
+    width: 280px;
+    padding: 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  & input[type="checkbox"],
+  & input[type="radio"] {
+    display: none;
+  }
+  & input+label:not(.label)::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 35px;
+    vertical-align: middle;
+    border: 10px solid #fff;
+    box-shadow: 0 0 0 2px #e5e5e5;
+  }
+  & input:checked+label:not(.label)::before {
+    background: #d22856;
+  }
+  & input[type=checkbox]:checked + label:not(.label)::before {
+    background: url(../img/check.png) no-repeat center;
+    border: 0;
+    width: 35px;
+    height: 35px;
+  }
+  & label[for^="radio"]:before {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+  }
+  & textarea {
+    width: 238px;
+    height: 157px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  &__submit {
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #2aab6d;
+    padding: 15px 0;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px
+  }
+  &__note {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 50px
+  }
+   & fieldset {
+    border: transparent;
+   }
 }
-.label {
-  color: #d22856;
-  text-transform: uppercase;
-  padding-left: 25px
+@media @tablet-width {
+  .contest-form {
+    padding-top: 95px;
+    position: relative;
+      & .text {
+      font-size: 18px;
+      padding: 0 45px;
+      }
+      & .text-hidden {
+      display: block;
+      }
+      & form {
+        margin: 0;
+      }
+      & label {
+        font-size: 18px;
+      }
+      & .label {
+        display: inline-block;
+        padding: 0 15px 0 0;
+      }
+      & input[type="text"],
+      & input[type="tel"],
+      & input[type="email"] {
+        width: 519px;
+        border: 2px solid #e5e5e5;
+      }
+      & input[class="contest-form__name"] {
+        width: 560px;
+      }
+      & input[type="tel"],
+      & input[type="email"] {
+        width: 495px;
+      }
+      & fieldset {
+        border: 2px solid #d22856;
+        padding: 45px 60px;
+      }
+      & legend {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 20px;
+        color: #d22856;
+      }
+      & textarea {
+        width: 455px;
+      }
+      &__submit {
+        width: 300px;
+      }
+      &__note {
+        display: inline-block;
+        float: right;
+      }
+      & input[type="tel"] {
+        background: url(../img/phone.png) no-repeat 95% 50%;
+      }
+      & input[type="email"] {
+        background: url(../img/mail.png) no-repeat 95% 50%;
+      }
+  }
 }
-.label--align {
-  text-align: center;
-  padding-left: 0
+@media @desktop-width {
+  .contest-form {
+    &__bundle-wrap:first-child {
+      width: 50%;
+    }
+    &__bundle-wrap:nth-of-type(4) {
+      width: 50%;
+    }
+    & input[type="text"],
+    & input[type="tel"],
+    & input[type="email"] {
+      width: 340px;
+    }
+    & input[class="contest-form__name"] {
+      width: 375px;
+    }
+    & input[type="tel"],
+    & input[type="email"] {
+      margin: 0;
+      width: 375px;
+    }
+    & input[type="tel"] {
+      float: left;
+    }
+    & input[type="email"] {
+      float: right;
+    }
+    & label[for^="checkbox"] {
+      display: inline-block;
+      min-width: 250px;
+      margin-right: 18px;
+    }
+    & input+label:not(.label)::before {
+      margin-right: 20px;
+    }
+    &__bundle-wrap:nth-of-type(3) label {
+      display: none;
+    }
+    & textarea {
+      width: 775px;
+    }
+  }
 }
-.contest-form__bundle-wrap {
-  padding: 30px 0 40px
-}
-.contest-form__bundle-wrap:first-of-type {
-  padding: 0 0 40px 0
-}
-.contest-form__submit {
-  width: 100%;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #2aab6d;
-  padding: 15px 0;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 30px
-}
-.contest-form__note {
-  text-align: center;
-  text-transform: uppercase;
-  padding-bottom: 50px
-}
+
+
+
+
+
+
+
+
+
+
